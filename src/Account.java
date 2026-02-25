@@ -31,7 +31,7 @@ public class Account {
         }
     }
     public void withdraw(double amount){
-        if(amount<=balance && amount>0){
+        if(amount<=balance && amount>0 && balance>500.0){
             balance -= amount;
             transactions.add(new Transaction("Withdraw",amount));
         }
@@ -53,5 +53,10 @@ public class Account {
                 System.out.println(t.getTimeStamp() +"|" + t.getType() +"|" + t.getAmount());
             }
         }
+    }
+    public void displayAccountDetails(){
+        System.out.println("Account Number :" + accountNumber );
+        System.out.println("Holder Name:" + name);
+        System.out.println("Balance:" + balance);
     }
 }

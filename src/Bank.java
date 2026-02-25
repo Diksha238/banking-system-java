@@ -12,7 +12,6 @@ public class Bank {
             accounts.put(accNo,acc);
         }
     }
-
     public Account getAccount(int accNo) {
         return accounts.get(accNo);
     }
